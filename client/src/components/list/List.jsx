@@ -4,7 +4,12 @@ import Card from '../card/Card';
 function List({data}) {
   return (
     <div>
-        { data.map(item => <Card key={item.id} data={item}/>)}
+        { data.map(item => 
+        <div>
+        <input type="checkbox" />
+        <Card key={item.id} data={item}/>
+        </div>
+        )}
     </div>
   )
 }
