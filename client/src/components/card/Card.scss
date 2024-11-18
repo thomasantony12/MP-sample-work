@@ -1,0 +1,53 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7rem;
+  width: 15rem;
+  border: solid black 2px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 7px;
+
+  .left {
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    .title{
+        font-weight: 500;
+    }
+
+    p{
+        margin: 2px;
+        font-weight: 400;
+        font-size: small;
+    }
+  }
+  .right {
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+    button {
+        all: unset;
+        margin: 3px;
+        cursor: pointer;
+        font-size: x-small;
+    }
+
+    .edit{
+        color: blue;
+    }
+
+    .delete{
+        color: red;
+    }
+
+    .complete{
+        color: green;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "./responsive.scss";
+
+.layout{
+    height: auto;
+    max-width: 1366px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include lg{
+        background-color: rgb(246, 192, 192);
+        max-width: 1280px;
+    }
+
+    @include md{
+        background-color: rgb(187, 163, 243);
+        max-width: 768px;
+
+    }
+
+    @include sm{
+        background-color: rgb(180, 239, 198);
+        max-width: 640px;
+
+    }
+
+    h1{
+        margin-top: 100px;
+        text-align: center;
+        color: #10375C;
+        width: 100%;
+        margin-bottom: 10px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .input{
+        padding: auto;
+        
+        input{
+            margin-right: 5px;
+            padding: 7px;
+        }
+        button{
+            border: solid blue 1px;
+            background-color: #5751f8;
+            border-radius: 3px;
+            color: #ffffff;
+            padding: 8px;
+        }
+    }
+}
