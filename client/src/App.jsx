@@ -1,16 +1,20 @@
 import { useState } from "react";
-import List from "./components/List/List";
+import List from "./components/List/List.jsx";
+import Tabs from "./components/tabs/Tabs.jsx";
 import "./layout.scss";
 import { todoList } from "./lib/sampledata.js";
 
 function App() {
   const [item, setItem] = useState("");
+  const [tab, setTab] = useState(1);
   const onChangeHandler = (e) => {
     const value = e.target.value;
     setItem(value);
   };
 
-  const clickHandler = () => {};
+  const clickHandler = () => {
+    setItem('');
+  };
 
   return (
     <div className="layout">
@@ -26,7 +30,8 @@ function App() {
         />
         <button onClick={clickHandler}>Add</button>
       </div>
-      <List data={todoList} />
+      <Tabs setTab={setTab} tab={tab} />
+      <List data={todoList}/>
     </div>
   );
 }

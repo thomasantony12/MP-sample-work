@@ -6,8 +6,8 @@ function Card({ data }) {
     <div>
       <div className="card">
         <div className="left">
-          <p className="title">Name: {data.task}</p>
-          <p>Date: {data.date}</p>
+          <p className="title">{data.task}</p>
+          <p>{data.date}</p>
           <p>Status: {data.status}</p>
         </div>
         <div className="right">
