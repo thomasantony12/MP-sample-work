@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import Card from '../card/Card';
+import "./List.scss"
 
 function List({data}) {
   return (
-    <div>
+    <div className='list'>
         { data.map(item => 
-        <div>
+        <div className='container' key={item.id}>
         <input type="checkbox" />
         <Card key={item.id} data={item}/>
         </div>

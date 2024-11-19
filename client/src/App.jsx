@@ -1,5 +1,5 @@
 import { useState } from "react";
-import List from "./components/List/List.jsx";
+import List from "./components/list/List.jsx";
 import Tabs from "./components/tabs/Tabs.jsx";
 import "./layout.scss";
 import { todoList } from "./lib/sampledata.js";
@@ -13,7 +13,7 @@ function App() {
   };
 
   const clickHandler = () => {
-    setItem('');
+    setItem("");
   };
 
   return (
@@ -31,7 +31,10 @@ function App() {
         <button onClick={clickHandler}>Add</button>
       </div>
       <Tabs setTab={setTab} tab={tab} />
-      <List data={todoList}/>
+      <div className="delete">
+      <button><img src="../public/delete.png" alt="" /></button>
+      </div>
+      <List data={todoList} />
     </div>
   );
 }
