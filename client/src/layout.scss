@@ -13,17 +13,14 @@
   align-items: center;
 
   @include responsive.lg {
-    background-color: rgb(246, 192, 192);
     max-width: 1280px;
   }
 
   @include responsive.md {
-    background-color: rgb(187, 163, 243);
     max-width: 768px;
   }
 
   @include responsive.sm {
-    background-color: rgb(180, 239, 198);
     max-width: 640px;
   }
 
@@ -69,6 +66,14 @@
           height: 20px;
           filter: invert(100%);
     }
+    }
+
+    @include responsive.md {
+      width: 50%;
+    }
+
+    @include responsive.sm {
+      width: 70%;
     }
   }
 }
