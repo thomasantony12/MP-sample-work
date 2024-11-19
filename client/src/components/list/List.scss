@@ -1,8 +1,10 @@
 .list{
     .container{
         display: flex;
+        align-items: center;
 
         input{
+          height: fit-content;
           transform: scale(1.5);
           accent-color: #e64646;
         }

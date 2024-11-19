@@ -4,7 +4,7 @@
   justify-content: space-between;
   height: 7rem;
   width: 15rem;
-  border: solid black 2px;
+  border: solid black 1px;
   border-radius: 5px;
   padding: 10px;
   margin: 7px;
@@ -16,13 +16,28 @@
     flex-direction: column;
 
     .title{
-        font-weight: 500;
+        font-weight: 900;
+    }
+
+    .time{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: xx-small;
+      font-weight: bold;
+      color: rgb(21, 0, 255);
+    }
+
+    .status{
+      font-family: 'Times New Roman', Times, serif;
+      font-size: smaller;
+      font-weight: 200;
+      color: rgb(40, 5, 33);
     }
 
     p{
         margin: 2px;
         font-weight: 400;
         font-size: small;
+
     }
   }
   .right {
