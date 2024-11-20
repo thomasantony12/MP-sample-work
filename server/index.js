@@ -52,7 +52,6 @@ app.post("/newTask", async (req, res) => {
 app.delete("/deleteTask", async (req, res) => {
   try {
     const id = req.body.dId;
-    console.log(id);
     await db.query("DELETE FROM todolist WHERE id = $1", [id]);
     res.status(200).json({ message: "delete successful!" });
   } catch (err) {
