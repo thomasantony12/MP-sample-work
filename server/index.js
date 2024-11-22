@@ -2,7 +2,10 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import pg from "pg";
+import dotenv from "dotenv";
 
+
+dotenv.config();
 const app = express();
 const port = 3000;
 const corsOptions = {
@@ -13,11 +16,7 @@ const corsOptions = {
 };
 
 const db = new pg.Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "todo",
-  password: "Thoma$2580",
-  port: 5432,
+  connectionString: process.env.POSTGRES_URL,
 });
 
 db.connect();
