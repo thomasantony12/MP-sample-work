@@ -25,9 +25,13 @@ app.use(express.json());
 
 app.get("/", async (req, res) => {
   try {
+    console.log("test 1");
     const result = await db.query("SELECT * FROM todolist ORDER BY date");
+    console.log("test 2");
     res.send(result.rows);
+    console.log("test 3");
     res.status(200).json(result.rows);
+    console.log("test 4");
   } catch (err) {
     res.status(403).json({ message: "NO data available!" });
     console.log(err);
