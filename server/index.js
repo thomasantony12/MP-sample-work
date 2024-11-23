@@ -33,6 +33,7 @@ app.get("/", async (req, res) => {
     res.status(200).json(result.rows);
     console.log("test 4");
   } catch (err) {
+    res.send("test error",err);
     res.status(403).json({ message: "NO data available!" });
     console.log(err);
   }
