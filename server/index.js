@@ -1,5 +1,4 @@
 import express from "express";
-import cors from "cors";
 import pg from "pg";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
@@ -17,19 +16,12 @@ const corsOptions = {
 
 const db = new pg.Pool({
   connectionString: process.env.POSTGRES_URL,
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_DATABASE,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
 });
 
 db.connect();
 
-app.options("", cors(corsOptions));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors(corsOptions));
 
 app.get("/", async (req, res) => {
   try {
