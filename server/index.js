@@ -26,6 +26,7 @@ const db = new pg.Pool({
 
 db.connect();
 
+app.options("", cors(corsOptions));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors(corsOptions));
