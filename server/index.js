@@ -26,6 +26,7 @@ app.use(cors(corsOptions));
 app.get("/", async (req, res) => {
   try {
     const result = await db.query("SELECT * FROM todolist ORDER BY date");
+    res.send(result.rows);
     res.status(200).json(result.rows);
   } catch (err) {
     res.status(403).json({ message: "NO data available!" });
