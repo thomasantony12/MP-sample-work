@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 const app = express();
-const port = 3000;
+const port = process.env.APIPORT || 3000;
 const corsOptions = {
   origin: "*",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
