@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import pg from "pg";
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
 
 
 dotenv.config();
@@ -20,6 +21,7 @@ const db = new pg.Pool({
 
 db.connect();
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors(corsOptions));
 
